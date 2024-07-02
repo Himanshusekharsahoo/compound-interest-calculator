@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="title-container">
+        <h2 class="title">Compound Interest Calculator</h2>
+        <h4 class="subtitle">Calculate the Future Value of Your Investments</h4>
+      </div>    
+      <form id="interest-form">
+        <label for="principal">Initial Investment (₹):</label>
+        <input type="number" id="principal" required />
+
+        <label for="contribution">Monthly Contribution (₹):</label>
+        <input type="number" id="contribution" required />
+
+        <label for="rate">Annual Interest Rate (%):</label>
+        <input type="number" id="rate" step="0.01" required />
+
+        <label for="years">Number of Years:</label>
+        <input type="number" id="years" required />
+
+        <button type="button" onclick="calculateInterest()">Calculate</button>     
+      </form>
+      <div id="result"></div>
+      <button type="button" id="reset-button" onclick="reset()">Reset</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
